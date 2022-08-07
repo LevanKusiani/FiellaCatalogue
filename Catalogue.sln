@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalogue.API", "Catalogue\Catalogue.API.csproj", "{0462B4F0-3569-44A3-84B9-7617AAE19EBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalogue.API", "src\Catalogue.API\Catalogue.API.csproj", "{0462B4F0-3569-44A3-84B9-7617AAE19EBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalogue.Domain", "Catalogue.Domain\Catalogue.Domain.csproj", "{60DDC47A-30A0-4C68-A1DB-5040EDF640F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalogue.Domain", "src\Catalogue.Domain\Catalogue.Domain.csproj", "{60DDC47A-30A0-4C68-A1DB-5040EDF640F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalogue.Infrastructure", "Catalogue.Infrastructure\Catalogue.Infrastructure.csproj", "{8A35A411-F6BF-4FC3-91A7-ADAB630115F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalogue.Infrastructure", "src\Catalogue.Infrastructure\Catalogue.Infrastructure.csproj", "{8A35A411-F6BF-4FC3-91A7-ADAB630115F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalogue.Application", "Catalogue.Application\Catalogue.Application.csproj", "{816D29C3-3764-46C0-AC0D-5E117855E2AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalogue.Application", "src\Catalogue.Application\Catalogue.Application.csproj", "{816D29C3-3764-46C0-AC0D-5E117855E2AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1318B2FD-1730-4A9F-AE20-7966200DE6FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{002B2D4F-806A-4E5A-86EB-6364A75F6547}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +40,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0462B4F0-3569-44A3-84B9-7617AAE19EBD} = {1318B2FD-1730-4A9F-AE20-7966200DE6FC}
+		{60DDC47A-30A0-4C68-A1DB-5040EDF640F1} = {1318B2FD-1730-4A9F-AE20-7966200DE6FC}
+		{8A35A411-F6BF-4FC3-91A7-ADAB630115F4} = {1318B2FD-1730-4A9F-AE20-7966200DE6FC}
+		{816D29C3-3764-46C0-AC0D-5E117855E2AE} = {1318B2FD-1730-4A9F-AE20-7966200DE6FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {41108195-D22B-439B-AD80-09751B6CB401}
