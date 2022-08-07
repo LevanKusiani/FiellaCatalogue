@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "/dge1VI8JCAwJQlnQkA0MgL1YjTQgsfcxnHVUK5ki8AjtkAafs7YKtLN0AI/3IhxIh9ev5KdDT8B6lyJTIcUhw==",
+  "success": true,
+  "projectFilePath": "E:\\Development\\source\\MsPr\\Fiella\\Catalogue\\Catalogue\\Catalogue.Application\\Catalogue.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\levan\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\levan\\.nuget\\packages\\fluentvalidation\\11.1.1\\fluentvalidation.11.1.1.nupkg.sha512",
+    "C:\\Users\\levan\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\levan\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\levan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\levan\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\levan\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\levan\\.nuget\\packages\\npgsql\\6.0.6\\npgsql.6.0.6.nupkg.sha512",
+    "C:\\Users\\levan\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
