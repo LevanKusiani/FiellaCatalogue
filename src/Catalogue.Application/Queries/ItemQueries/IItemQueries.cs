@@ -6,6 +6,6 @@ namespace Catalogue.Application.Queries.ItemQueries
     {
         Task<IEnumerable<ItemDTO>> GetItemsAsync(string sortField, SortOrder sortOrder, int? skip, int? take, string? itemName);
 
-        Task<ItemDetailsDTO> GetItemByIdAsync(Guid itemId);
+        Task<ItemDetailsDTO> GetItemByIdAsync(int itemId);
     }
 }

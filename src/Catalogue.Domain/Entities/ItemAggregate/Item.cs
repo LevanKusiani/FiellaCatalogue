@@ -22,5 +22,16 @@ namespace Catalogue.Domain.Entities.ItemAggregate
         public decimal Price { get; private set; }
 
         public string ImageUrl { get; private set; }
+
+        public void UpdateDetails(string name,
+            string description,
+            decimal price,
+            string imageUrl)
+        {
+            Name = name;
+            Description = description;
+            Price = price;
+            ImageUrl = imageUrl;
+        }
     }
 }

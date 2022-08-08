@@ -21,14 +21,8 @@ namespace Catalogue.API.Controllers.V1
             _itemQueries = itemQueries ?? throw new ArgumentNullException(nameof(IItemQueries));
         }
 
-        [HttpGet("test")]
-        public IActionResult TestMethod()
-        {
-            return Ok("testing");
-        }
-
         [HttpGet]
-        public async Task<IActionResult> Items([Required] string sortField,
+        public async Task<IActionResult> GetItemsAsync([Required] string sortField,
             [Required] SortOrder sortOrder,
             int? skip,
             int? take,
@@ -39,15 +33,43 @@ namespace Catalogue.API.Controllers.V1
 
         [HttpGet]
         [Route("{id:int}")]
-        public async Task<IActionResult> ItemDetails([Required] Guid id)
+        public async Task<IActionResult> GetItemDetailsAsync([Required] int id)
         {
             return Ok(await _itemQueries.GetItemByIdAsync(id));
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddItem([FromBody] CreateItemCommand command)
+        public async Task<IActionResult> AddItemAsync([FromBody] CreateItemCommand command)
         {
             if(!ModelState.IsValid)
+                return BadRequest();
+
+            var commandResult = await _mediator.Send(command);
+
+            if (!commandResult)
+                return BadRequest();
+
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateItemAsync([FromBody] UpdateItemCommand command)
+        {
+            if(!ModelState.IsValid)
+                return BadRequest();
+
+            var commandResult = await _mediator.Send(command);
+
+            if (!commandResult)
+                return BadRequest();
+
+            return Ok();
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteItemAsync([FromBody] DeleteItemCommand command)
+        {
+            if (!ModelState.IsValid)
                 return BadRequest();
 
             var commandResult = await _mediator.Send(command);

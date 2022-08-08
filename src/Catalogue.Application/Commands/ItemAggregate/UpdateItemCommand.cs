@@ -1,8 +1,10 @@
-﻿namespace Catalogue.Application.Queries.ItemQueries
+﻿using MediatR;
+
+namespace Catalogue.Application.Commands.ItemAggregate
 {
-    public class ItemDetailsDTO
+    public class UpdateItemCommand : IRequest<bool>
     {
-        public int Id { get; set; }
+        public int ItemId { get; set; }
 
         public string Name { get; set; }
 

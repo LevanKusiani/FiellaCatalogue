@@ -16,15 +16,15 @@ namespace Catalogue.Application.Queries.ItemQueries
             _connectionString = config?.Value.CatalogueDbConnection ?? throw new ArgumentNullException(nameof(ConnectionStrings));
         }
 
-        public async Task<ItemDetailsDTO> GetItemByIdAsync(Guid itemId)
+        public async Task<ItemDetailsDTO> GetItemByIdAsync(int itemId)
         {
             using var connection = new NpgsqlConnection(_connectionString);
 
             connection.Open();
 
-            return await connection.QuerySingleAsync<ItemDetailsDTO>($@"
+            return await connection.QuerySingleOrDefaultAsync<ItemDetailsDTO>($@"
                 SELECT * FROM ""public"".""Item""
-                WHERE ""Id"" = @id",
+                WHERE ""Id"" = @itemId AND ""DeletedAt"" IS NULL",
                 new { itemId });
         }
 
@@ -45,6 +45,7 @@ namespace Catalogue.Application.Queries.ItemQueries
 
             return await connection.QueryAsync<ItemDTO>($@"
                 SELECT * FROM ""public"".""Item""
+                WHERE ""DeletedAt"" IS NULL {filters}
                 ORDER BY ""{sortField}"" {sortOrder} 
                 {offset}",
                 new { itemName });

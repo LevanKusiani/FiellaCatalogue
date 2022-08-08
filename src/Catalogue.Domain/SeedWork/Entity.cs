@@ -7,5 +7,10 @@
         public DateTimeOffset? ModifiedAt { get; set; }
 
         public DateTimeOffset? DeletedAt { get; set; }
+
+        public void MarkAsDeleted()
+        {
+            DeletedAt = DateTimeOffset.UtcNow;
+        }
     }
 }

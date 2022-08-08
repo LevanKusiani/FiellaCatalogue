@@ -11,6 +11,12 @@ namespace Catalogue.Infrastructure.Repositories
         {
         }
 
+        public async Task<Item> GetActiveItemAsync(int id)
+        {
+            return await _dbContext.Set<Item>()
+                .FirstOrDefaultAsync(x => x.Id == id && x.DeletedAt == null);
+        }
+
         public async Task<IEnumerable<Item>> GetAllAsync(string name, string description, decimal? priceFrom, decimal? priceTo)
         {
             return await _dbContext.Set<Item>()
